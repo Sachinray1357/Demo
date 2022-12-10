@@ -8,12 +8,11 @@ export const addTodo = (data:string) => {
     }
 }
 
-export const updateTodo = ( data:string) =>{
+export const updateTodo = ( payload:any) =>{
+    console.log('payload--',payload);
     return {
         type:"UPDATE_TODO",
-        payload: {
-            data
-        }
+        payload
     }
 }
 

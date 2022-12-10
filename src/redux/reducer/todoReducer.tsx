@@ -20,25 +20,29 @@ const todoReducers = (state = initialState, action) => {
                 ]
             }
 
-        // case "UPDATE_TODO":
+        case "UPDATE_TODO":
+            let upData = action.payload;
+            console.log('reducerUpdate-', upData);
+            const updatedList = state.list.map((data: any) => {
+                console.log('if--',data.id);
+                console.log('ifdata--',data);
+                if (data.id === upData.id) {
+                    return {
+                        ...data, data: upData.data
+                    };
+                }
+                return data;
+            })
+            return {
+                ...state,
+                list: updatedList
 
-        //     const updatedList = state.list.map((data:any)=>{
-        //         if(data.id === action.id){
-        //             return {
-        //                 ...data, data:action.data
-        //             };
-        //         }
-        //         return data;
-        //     })
-        //     return {
-        //         ...state,
-        //         list: updatedList
+            }
 
-        //     }
 
         case "DELETE_TODO":
 
-            const newList = state.list.filter((item:any) => item.id !== action.id)
+            const newList = state.list.filter((item: any) => item.id !== action.id)
 
             return {
                 ...state,

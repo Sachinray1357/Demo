@@ -9,7 +9,7 @@ interface InputAreaProps {
     Icon?: any,
     styles?: any,
     secureTextEntry?: any,
-    placeholderColor: any,
+    placeholderColor?: any,
     onPress?:any,
     value?:any,
     onChange?:any,
