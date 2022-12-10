@@ -39,5 +39,6 @@ export default {
 		light: '#ccc',
 		halfOpacitySecondary: 'rgba(240, 149, 17, 0.5)',
 		halfOpacityPrimary: 'rgba(0, 132, 255, 0.5)',
-    bgColorSecondary:'#f0c0bd'
+    bgColorSecondary:'#f0c0bd',
+    todoBgColor:'#d9b8d7',
 };

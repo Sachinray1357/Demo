@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@react-native-community/geolocation": "^3.0.3",
+    "@reduxjs/toolkit": "^1.9.1",
     "axios": "^0.26.0",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-image-crop-picker": "^0.38.1",
     "react-native-paper": "^4.12.5",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

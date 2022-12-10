@@ -1,11 +1,17 @@
+import { SignupScreen, Todo } from './src/screens/index';
 import { Text, View } from 'react-native';
 
+import { Provider } from 'react-redux';
 import React from 'react';
-import SignupScreen from './src/screens/signup-screen/SignupScreen';
+import { store } from './src/redux/store/index';
 
 const App = () => {
+  console.log('store',store.getState());
+  
   return (
-    <SignupScreen />
+    <Provider store={store}>
+      <Todo />
+    </Provider>
   )
 }
 

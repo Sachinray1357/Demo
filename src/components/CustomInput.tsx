@@ -50,7 +50,7 @@ export class CustomInput extends Component<InputAreaProps, InputAreaState> {
                     keyboardType={this.props.keyboardType}
                     maxLength={this.props.maxLength}
                 />
-                <TouchableOpacity onPress={this.props.onPress} style={styles.iconWrap}>
+                <TouchableOpacity onPress={this.props.onPress} style={[styles.iconWrap, {...this.props.styles}]}>
                     {this.props.Icon}
                 </TouchableOpacity>
             </View>

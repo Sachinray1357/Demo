@@ -1,0 +1,6 @@
+const onTest = () => {
+        Alert.alert("Testing", "Are Yoy SUre", [
+            { text: "Yes", onPress: () => console.log("Yes") },
+            { text: "No", onPress: () => console.log("No") }
+        ])
+    }
