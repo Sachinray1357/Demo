@@ -1,19 +1,13 @@
-import { Alert, FlatList, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
-import { addTodo, deleteTodo, updateTodo } from '../../redux/action';
-import { height, width } from '../../styles/Dimension';
+import { StatusBar, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Colors from '../../assets/colors/Colors';
-import Icons from '../../constants/Icons';
-import { Item } from 'react-native-paper/lib/typescript/components/List/List';
 import TodoInput from '../../components/TodoInput';
 import Todos from '../../components/Todos';
 import styles from './styles';
 
 const Todo = () => {
-
-    const [todo, setTodo] = useState<string>("");
 
     // update form visibility state
     const [editFormVisibility, setEditFormVisibility] = useState<boolean>(false);
@@ -26,7 +20,7 @@ const Todo = () => {
     const dispatch = useDispatch();
 
     // this function will trigger when someone clicks the edit icon
-    const handleEditClick = (todo:string) => {
+    const handleEditClick = (todo: string) => {
         setEditFormVisibility(true);
         setEditTodo(todo);
     }

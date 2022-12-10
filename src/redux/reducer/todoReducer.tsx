@@ -24,8 +24,8 @@ const todoReducers = (state = initialState, action) => {
             let upData = action.payload;
             console.log('reducerUpdate-', upData);
             const updatedList = state.list.map((data: any) => {
-                console.log('if--',data.id);
-                console.log('ifdata--',data);
+                console.log('if--', data.id);
+                console.log('ifdata--', data);
                 if (data.id === upData.id) {
                     return {
                         ...data, data: upData.data

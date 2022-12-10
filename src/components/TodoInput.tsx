@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { addTodo, deleteTodo, updateTodo } from '../../src/redux/action/index';
+import { addTodo, updateTodo } from '../../src/redux/action/index';
 import { height, width } from '../styles/Dimension';
-import { useDispatch, useSelector } from 'react-redux';
 
 import Colors from '../assets/colors/Colors';
 import CustomInput from './CustomInput';
 import Icons from '../constants/Icons';
+import { useDispatch } from 'react-redux';
 
 const TodoInput = ({ editFormVisibility, editTodo, cancelUpdate, }) => {
 
