@@ -1,15 +1,9 @@
 export default {
-    LOGIN: 'Login',
-    HOME:'HomeScreen2',
-    RATING:'StarRating',
-    SETTING:'Settings',
-    WEBHOME:'WebrtcHome',
-    DURINGCALL:'DuringCall',
-    DURINGCALL2:'DuringCall2',
-    CHATSCREEN:'ChatScreen',
-    CALL:'Call',
-    HOME_SCREEN:'HomeScreen',
-    DRAGGABLE:'Draggable',
-    SIGNUP:'SignupScreen',
-    TESTING:'Testing',
-    };
+    WELCOME:'WelcomeScreen',
+    LOGIN: 'LoginScreen',
+    SIGNUP: 'SignupScreen',
+    REGISTER: 'RegisterScreen',
+    TODO: 'Todo',
+    HOME:'HomeScreen',
+    FACEBOOK:'FacebookLogin',
+};

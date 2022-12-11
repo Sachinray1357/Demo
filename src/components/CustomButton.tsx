@@ -10,7 +10,8 @@ interface CustomButtonProps {
   title2?: any;
   Icon?: any;
   styles?: any;
-  disabled?:any;
+  disabled?: any;
+  activeOpacity: any;
 }
 
 export default class CustomButton extends Component<CustomButtonProps, {}> {
@@ -20,8 +21,9 @@ export default class CustomButton extends Component<CustomButtonProps, {}> {
   render() {
     return (
       <TouchableOpacity
+        activeOpacity={this.props.activeOpacity}
         onPress={this.props.onPress}
-        style={[styles.btnContainer, {...this.props.styles}]}>
+        style={[styles.btnContainer, { ...this.props.styles }]}>
         {this.props.Icon}
         <Text style={styles.btnText}>{this.props.title}</Text>
         <Text style={styles.btnText2}>{this.props.title2}</Text>
@@ -53,14 +55,14 @@ const styles = StyleSheet.create({
     color: Colors.btnTxtColor,
     fontSize: 16,
     fontFamily: 'p-500',
-    fontWeight:'bold'
+    fontWeight: 'bold'
   },
   btnText2: {
     color: Colors.headerColor,
     fontSize: 14,
     fontFamily: 'p-500',
-    fontWeight:'bold',
-    left:8
+    fontWeight: 'bold',
+    left: 8
   },
   btn: {
     width: width * 0.18,
@@ -70,9 +72,9 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     borderWidth: 1,
     borderRadius: 10,
-},
-btnTitle: {
+  },
+  btnTitle: {
     color: 'white',
     fontWeight: 'bold',
-}
+  }
 });
