@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">DemoTesting</string>
-    <string name="facebook_app_id">476995034568721</string>
-    <string name="fb_login_protocol_scheme">fb476995034568721</string>
-    <string name="facebook_client_token">04ae5846de09d52217649b39a20d3c6f</string>
+    <string name="facebook_app_id">538761781484380</string>
+    <string name="fb_login_protocol_scheme">fb538761781484380</string>
+    <string name="facebook_client_token">ce76134ce2da65b200b0abb4678ea865</string>
 
 
 </resources>
