@@ -1,8 +1,7 @@
 import './src/config/firebase';
 
-import { SignupScreen, Todo } from './src/screens/index';
-import { Text, View } from 'react-native';
-
+import DrawerNavigation from './src/navigation/Menubar'
+import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import React from 'react';
 import RootNavigation from './src/navigation';
@@ -12,9 +11,12 @@ const App = () => {
   console.log('store', store.getState());
 
   return (
-    <Provider store={store}>
-      <RootNavigation />
-    </Provider>
+    // <Provider store={store}>
+    //   <RootNavigation />
+    // </Provider>
+    <NavigationContainer>
+      <DrawerNavigation/>
+    </NavigationContainer>
   )
 }
 
