@@ -15,6 +15,7 @@ import Icons from '../constants/Icons';
 import ImagePath from '../constants/ImagePath';
 import Login from '../screens/user-login/Login';
 import Services from '../screens/services/Services';
+import Todo from '../screens/todo-list/Todo';
 
 const Drawer = createDrawerNavigator();
   
@@ -31,7 +32,7 @@ const Drawer = createDrawerNavigator();
       <DrawerContentScrollView {...props}>
         <View style={styles.imageWrap}>
           <Image
-            source={ImagePath.TODO_LOGO}
+            source={ImagePath.logo}
             style={styles.logo}
             resizeMode="contain"
           />
@@ -206,6 +207,25 @@ const Drawer = createDrawerNavigator();
               }}
               component={Login}
             />
+            <Drawer.Screen
+              name="Todo List"
+              options={{
+                drawerIcon: ({ color }) => [
+                  <Icons.AntDgn
+                    name="right"
+                    color={color}
+                    size={15}
+                    style={{
+                      alignSelf: 'center',
+                      position: 'absolute',
+                      right: 5,
+                    }}
+                  />,
+                  <Icons.MaterialIcons name="create-new-folder" color={color} size={18} style={{bottom:2}} />,
+                ],
+              }}
+              component={Todo}
+            />
           </Drawer.Navigator>
         </>
       );
@@ -222,16 +242,16 @@ const Drawer = createDrawerNavigator();
     imageWrap: {
       flex: 1,
       alignItems: 'center',
-      paddingVertical: 20,
+      // paddingVertical: 10,
       // backgroundColor:'red'
     },
     logo: {
-      height: 60,
-      width: 70,
+      height: 80,
+      width: 160,
     },
     headerText: {
       fontSize: 22,
-      marginTop: 5,
+      // marginTop: 5,
       fontFamily: 'p-600',
       color: Colors.primaryBlackColor,
     },

@@ -14,9 +14,11 @@ const App = () => {
     // <Provider store={store}>
     //   <RootNavigation />
     // </Provider>
-    <NavigationContainer>
-      <DrawerNavigation/>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <DrawerNavigation />
+      </NavigationContainer>
+    </Provider>
   )
 }
 
